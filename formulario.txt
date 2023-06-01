@@ -1,0 +1,31 @@
+FORM
+-------Aula 01-------
+1. action="" -> pagína que está no servidor e que irá receber os dados enviados pelo form
+
+<form action="pagina.php">
+
+2. method="" -> metódo de envio
+  2.1 get -> os dados serão enviados pela própria URL.
+   > poucos dados e que não tenham necessidade de segurança.
+
+  2.2 post -> dados enviados pelo protocolo HTTP/HTTPS (ligeiramente escondido).
+    > mais dados e, principalmente, aqueles que tenham necessidade de segurança, como, p. ex., login e senha.
+
+    -------Aula 02-------
+    # Organizando a Semântica de Dados.
+
+      <form action="">
+    <fieldset>
+      <legend>Login</legend>
+      <label for="log">User</label>
+      <br>
+      <input type="text" name="text" id="log">
+      <br>
+      <label for="pass">Password</label>
+      <br>
+      <input type="password" name="pass" id="pass">
+      <br>
+      <input type="submit" value="login">
+    </fieldset>
+  </form>
+         

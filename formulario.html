@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+</head>
+<body>
+  <h1>Formulário de Busca (Google)</h1>
+  <form action="https://www.google.com.br/search" method="get">
+    <label for="busca">Faça uma busca</label>
+    <!-- for="" vai indicar especificamente o input que está se relacionando (vínculo).
+    Liga-se ao id do input que se quer vincular -->
+    <br>
+    <input type="text" name="q" id="busca">
+    <input type="submit" value="OK">
+    <!-- faz uma busca direto nos servidores do google -->
+    <!-- name="q" é um atributo exclusivo para buscar no google -->
+
+  </form>
+  <hr>
+
+  <h1>Login</h1>
+  <form action="">
+    <fieldset>
+      <legend>Login</legend>
+      <label for="log">User</label>
+      <br>
+      <input type="text" name="text" id="log">
+      <br>
+      <label for="pass">Password</label>
+      <br>
+      <input type="password" name="pass" id="pass">
+      <br>
+      <input type="submit" value="login">
+    </fieldset>
+  </form>
+
+
+</body>
+</html>
