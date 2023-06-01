@@ -10,10 +10,129 @@
   <form>
     <fieldset>
       <legend>Introdução</legend>
+      
+      <label for="">E-mail</label>
+      <br>
+      <input type="email" name="email" required placeholder="insira seu e-mail">
+      <!-- required condiciona o submit ao preenchimento do input -->
+      <!-- placeholder é um prepreenchimento (dica de preenchimento), mas não substitui o label -->
+      <br><br><hr>
+      
+      <label for="filhos">Quantidade de filhos</label>
+      <br>
+      <input type="number" id="filhos">
+      <br><br><hr>
 
-      <input type="email" name="email" required>
+      <label for="">Data de Nascimento</label>
+      <br>
+      <input type="date" name="nascimento" id="nascimento" min="2023-01-15">
+      <br><br><hr>
+
+      <label for="">Atividade Extra?</label>
+      <br>
+      <label><input type="radio" name="atividade" value="s">Sim</label>
+      <br>
+      <label><input type="radio" name="atividade" value="n">Não</label>
+      <!-- atributo name igual faz com que seja possível a escolha de uma única opção -->
+      <!-- isolar o input com o atributo label faz com que seja possível selecionar o input clicando no nome -->
+      <br><br><hr>
+
+      <fieldset>
+        <legend>Área de Interesse</legend>
+        <label>
+        <input type="checkbox" name="interesse" value="html">HTML
+        </label><br>
+        <label>
+        <input type="checkbox" name="interesse" value="css">CSS
+        </label><br>
+        <label>
+        <input type="checkbox" name="interesse" value="js">JavaScript
+        </label><br>
+        <label>
+        <input type="checkbox" name="interesse" value="php">PHP
+        </label><br>
+        <hr>
+
+        <label> Escolha uma linguagem
+          <br>
+          <select name="linguagem" required multiple size="9">
+            <!-- multiple deixa selecionar varias opções pressionando o ctrl -->
+            <!-- size estabelece quantas linhas serão mostradas -->
+            <option value="">Selecione</option>
+
+            <optgroup label="Frontend">
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="js">JavaScript</option>
+            </optgroup>
+
+            <optgroup label="Backend">
+              <option value="php">PHP</option>
+              <option value="python">Python</option>
+              <option value="c#">C#</option>
+            </optgroup>
+          </select>
+          <br><br><hr>
+          <legend>"Datalist"</legend>
+          <input type="text" list="linguagemList">
+          <datalist id="linguagemList">
+            <option value="HTML">
+            <option value="CSS">
+            <option value="JS">
+            <option value="PHP">
+            <option value="Python">
+          </datalist>
+        </label>
+      </fieldset>
+
       <input type="submit" value="Enviar">
     </fieldset>
+
+    <fieldset>
+      <legend>Deixe sua Mensagem</legend>
+      <textarea name="msg" cols="30" rows="10">Escreva aqui...</textarea>
+      <!-- No CSS, se adicionada a propriedade resize:none, o usuário não consegue redimensionar o tamanho da caixa para inserir o texto  -->
+      <!-- maxlenght="x" x vai ser o valor máximo de caracteres possíveis de serem inseridos -->
+
+      <textarea cols="50" rows="8" readonly disabled>
+        <!-- readonly e disabled tornam o textarea inalteravel pelo cliente -->
+CONTRATO DE UTILIZAÇÃO
+  REGRA 1.
+
+  REGRA 2.
+      </textarea>
+      
+      <br>
+      <label>
+        <input type="checkbox" checked> Li e aceito o contrato
+        <!-- checked deixa o checkbox habilitado por padrão -->
+      </label>
+      <br><br><hr>
+      <input type="file">
+    </fieldset>
+
+    <fieldset>
+      <input type="hidden" value="123456">
+      <!-- coloca algum valor escondido que se envolve com o backend -->
+    </fieldset>
+
+    <input type="button" value="button">
+    <!-- usa-se quando tem interação com o javascript, mas sem envio de formulário -->
+
+    <button type="submit">Mandar com tag Button</button>
+    <!-- esse comporta-se como o input type="submit", pois é usado para enviar formulários -->
+    <!-- a diferença entre o button e o input é que neste o nome fica dentro do value, e naquele fica dentro da tag button -->
+    <!-- entretanto, na tag button é possível acrescentar mais elementos dentro do botão, diferentemente do input type="submit" -->
+    <br><br><hr>
+    <input type="range" min="0" max="10" step=".5">
+
+    <br><br><hr>
+
+    <input type="time">
+
+    <br><br><hr>
+
+    <input type="color">
 
   </form>
 
